@@ -1,13 +1,9 @@
 Rails.application.routes.draw do
-  
-  get 'static_pages/home'
-
-  get 'static_pages/help'
-
-  get 'static_pages/about'
-
+  resources :games
   root 'static_pages#home'
-  match '/new', to: 'game#new', via: 'get'
-  match '/enter', to: 'game#existing', via: 'get'
-
+  match '/search',		to: 'games#search',				via: 'get'
+  match '/new',       to: 'games#new',          via: 'get'
+  match '/enter',     to: 'games#existing',     via: 'get'
+  match '/help',      to: 'static_pages#help',  via: 'get'
+  match '/about',     to: 'static_pages#about', via: 'get'
 end

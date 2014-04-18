@@ -1,0 +1,18 @@
+<div class="row">
+	<div class="span6 offset3">
+	<h1>New Game</h1>
+		<p>
+			<%= form_for @game do |f| %>
+				<%= f.hidden_field :ref_id, { :value => SecureRandom.hex(3) } %>
+
+				<%= f.label :curr_suggestion, "Starting Place" %>
+				<%= f.text_field :curr_suggestion %>
+
+				<%= f.label :time %>
+				<%= f.text_field :time %>
+
+				<%= f.submit "Start deliberation", class: "btn btn-medium btn-primary" %>
+			<% end %>
+		</p>
+	</div>
+</div>

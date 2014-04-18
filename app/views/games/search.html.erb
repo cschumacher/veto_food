@@ -1,0 +1,11 @@
+<div class="row">
+	<div class="span6 offset3">
+<h1>Find a Game</h1>
+		<%= form_tag search_path, :action => 'search', :method => 'get' do %>
+			<p>
+				<%= text_field_tag :search, params[:search] %>
+				<%= submit_tag "Search", :name => nil, class: "btn btn-medium"%>
+			</p>
+		<% end %>
+		</div>
+		</div>
